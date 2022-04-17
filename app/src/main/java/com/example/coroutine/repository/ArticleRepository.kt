@@ -20,6 +20,7 @@ class ArticleRepository {
 
     suspend fun getArticle(): String {
         val articleApi = retrofit.create(ArticleApi::class.java)
-        return articleApi.getHomeArticles(0).toString()
+        val response = articleApi.getHomeArticles(0)
+        return response.data.datas.first().title
     }
 }

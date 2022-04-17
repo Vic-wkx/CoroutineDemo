@@ -14,8 +14,5 @@ class MainActivity : AppCompatActivity() {
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         binding.lifecycleOwner = this
         binding.mainViewModel = mainViewModel
-        binding.btnRequest.setOnClickListener {
-            mainViewModel.getArticle()
-        }
     }
 }

@@ -7,8 +7,8 @@ import com.example.coroutine.repository.ArticleRepository
 import kotlinx.coroutines.launch
 
 class MainViewModel : ViewModel() {
-    val articlesLiveData = MutableLiveData<String>()
     private val articleRepository = ArticleRepository()
+    val articlesLiveData = MutableLiveData<String>()
 
     fun getArticle() {
         viewModelScope.launch {
